@@ -17,5 +17,5 @@ script:
   - pyinstaller --version
   - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
-  - python setup.py build_ext  --inplace --force
+  - sudo python setup.py build_ext  --inplace --force
   - PyInstaller --windowed PID-Analyzer.py -y --clean
