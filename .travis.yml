@@ -10,4 +10,3 @@ install:
 script:
   - wget https://github.com/cleanflight/blackbox-tools/releases/download/v0.4.3/blackbox-tools-0.4.3-macosx.tar.gz
   - tar -xvf ./blackbox-tools-0.4.3-macosx.tar.gz
-  
