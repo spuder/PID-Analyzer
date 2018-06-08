@@ -13,8 +13,8 @@ env:
 script:
   - python --version
   - pip --version
-  - pip install PyInstaller
+  - sudo pip install PyInstaller
   - pyinstaller --version
   - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
-  - PyInstaller PID-Analyzer.py -y
+  - PyInstaller --windowed PID-Analyzer.py -y --clean
