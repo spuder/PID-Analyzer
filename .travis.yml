@@ -14,6 +14,6 @@ env:
 script:
   - python --version
   - pip --version
-  - sudo pip install PyInstaller
+  - pip install PyInstaller
   - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
