@@ -1,14 +1,16 @@
 language: generic
 
-os: osx
+os:
+  - osx
 osx_image: xcode9.2
 
 install:
-  # - brew install python
+  - pip install PyInstaller
 env:
-  - PYTHON_VERSION=2.7
-  - BLACKBOX_VERSION="0.4.3"
+  global:
+    - PYTHON_VERSION=2.7
+    - BLACKBOX_VERSION="0.4.3"
 script:
   - python --version
   - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
-  - tar -xvf ./blackbox-tools-0.4.3-macosx.tar.gz
+  - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
