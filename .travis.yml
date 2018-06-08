@@ -2,10 +2,11 @@ language: generic
 
 os:
   - osx
-osx_image: xcode9.3
+osx_image: xcode9.3 # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
 
 install:
-  - pip install PyInstaller
+  - pip install --upgrade pip # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
+  - sudo pip install PyInstaller
 env:
   global:
     - PYTHON_VERSION=2.7
