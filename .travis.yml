@@ -15,7 +15,15 @@ script:
   - pip --version
   - sudo pip install PyInstaller
   - pyinstaller --version
-  - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
-  - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
-  - sudo python setup.py build_ext  --inplace --force
+  # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
+  # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
+  # https://stackoverflow.com/questions/47318119/no-module-named-pandas-libs-tslibs-timedeltas-in-pyinstaller
+  - |
+    if [ ! -F '/Library/Python/2.7/site-packages/PyInstaller/hooks/hook-pandas.py' ]; then
+      echo "hiddenimports = ['pandas._libs.tslibs.np_datetime','pandas._libs.tslibs.nattype','pandas._libs.skiplist']" | sudo tee /Library/Python/2.7/site-packages/PyInstaller/hooks/hook-pandas.py
+    else
+      echo "hook-pandas.py already exists"
+    fi
   - PyInstaller --windowed PID-Analyzer.py -y --clean
+  # lldb ./dist/PID-Analyzer.app
+  # process launch
