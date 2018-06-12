@@ -13,8 +13,8 @@ env:
 script:
   - python --version
   - pip --version
-  - sudo -H pip install nose
   - sudo -H pip install tornado
+  - sudo -H pip install nose
   - sudo -H pip install PyInstaller
   - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
