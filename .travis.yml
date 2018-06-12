@@ -19,7 +19,8 @@ script:
   # - sudo -H pip install nose
   # - python setup.py install --user
   - pip install PyInstaller --user
-  - pyinstaller --version
+  - ls
+  - pyinstaller --user --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
   # https://stackoverflow.com/questions/47318119/no-module-named-pandas-libs-tslibs-timedeltas-in-pyinstaller
