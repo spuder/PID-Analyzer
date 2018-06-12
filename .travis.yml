@@ -15,8 +15,6 @@ env:
 script:
   - python --version
   - pip --version
-  # - pip install tornado
-  # - sudo -H pip install nose
   # - python setup.py install --user
   - pip install PyInstaller --user
   - ls
