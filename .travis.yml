@@ -13,13 +13,14 @@ env:
 script:
   - python --version
   - pip --version
-  - sudo pip install PyInstaller
+  - sudo -H pip install PyInstaller
   - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
   # https://stackoverflow.com/questions/47318119/no-module-named-pandas-libs-tslibs-timedeltas-in-pyinstaller
   - |
-    if [ ! -F '/Library/Python/2.7/site-packages/PyInstaller/hooks/hook-pandas.py' ]; then
+    if [ ! -e '/Library/Python/2.7/site-packages/PyInstaller/hooks/hook-pandas.py' ]; then
+      echo "Writing out hooks-pandas.py"
       echo "hiddenimports = ['pandas._libs.tslibs.np_datetime','pandas._libs.tslibs.nattype','pandas._libs.skiplist']" | sudo tee /Library/Python/2.7/site-packages/PyInstaller/hooks/hook-pandas.py
     else
       echo "hook-pandas.py already exists"
