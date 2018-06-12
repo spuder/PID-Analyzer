@@ -6,6 +6,7 @@ matrix:
       osx_image: xcode9.3 # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
 
 install:
+  - python --version
   - brew reinstall python
   - sudo pip install --upgrade pip # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
 env:
