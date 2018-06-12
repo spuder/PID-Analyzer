@@ -17,7 +17,7 @@ script:
   - pip --version
   # - pip install tornado
   # - sudo -H pip install nose
-  - pip install PyInstaller
+  - pip install PyInstaller --user
   - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
