@@ -7,7 +7,6 @@ matrix:
 
 install:
   - brew reinstall python
-  # - python setup.py install --user
   - sudo pip install --upgrade pip # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
 env:
   global:
@@ -17,6 +16,7 @@ script:
   - pip --version
   # - pip install tornado
   # - sudo -H pip install nose
+  - python setup.py install --user
   - pip install PyInstaller --user
   - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
