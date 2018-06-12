@@ -7,7 +7,7 @@ matrix:
 
 install:
   - brew reinstall python
-  - python setup.py install --user
+  # - python setup.py install --user
   - pip install --upgrade pip # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
   # - sudo pip install --upgrade pip # https://github.com/pypa/pip/issues/5226#issuecomment-384815600
 env:
