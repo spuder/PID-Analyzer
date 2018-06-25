@@ -29,6 +29,6 @@ script:
     else
       echo "hook-pandas.py already exists"
     fi
-  - PyInstaller --windowed PID-Analyzer.py -y --clean
+  - PyInstaller --windowed PID-Analyzer.py  --hidden-import scipy._lib.messagestream --hidden-import pandas._libs.tslibs.timedeltas -y --clean 
   # lldb ./dist/PID-Analyzer.app
   # process launch
