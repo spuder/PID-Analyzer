@@ -18,7 +18,7 @@ script:
   # - python setup.py install --user
   - pip install PyInstaller --user
   - ls
-  - pyinstaller --user --version
+  - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
   # https://stackoverflow.com/questions/47318119/no-module-named-pandas-libs-tslibs-timedeltas-in-pyinstaller
@@ -29,6 +29,6 @@ script:
     else
       echo "hook-pandas.py already exists"
     fi
-  - PyInstaller --windowed PID-Analyzer.py  --hidden-import scipy._lib.messagestream --hidden-import pandas._libs.tslibs.timedeltas -y --clean 
+  - PyInstaller --windowed PID-Analyzer.py  --hidden-import scipy._lib.messagestream --hidden-import pandas._libs.tslibs.timedeltas -y --clean
   # lldb ./dist/PID-Analyzer.app
   # process launch
