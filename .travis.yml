@@ -18,7 +18,7 @@ script:
   # - python setup.py install --user
   - pip install PyInstaller --user
   - pip show PyInstaller --user
-  - ls
+  - ls ~/.local/bin
   - pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
