@@ -19,7 +19,7 @@ script:
   - pip install PyInstaller --user
   - pip show PyInstaller
   # - ls ~/.local/bin
-  - pyinstaller --version
+  - /Users/travis/Library/Python/2.7/lib/python/site-packages/pyinstaller --version
   # - wget https://github.com/cleanflight/blackbox-tools/releases/download/v$BLACKBOX_VERSION/blackbox-tools-$BLACKBOX_VERSION-macosx.tar.gz
   # - tar -xvf blackbox-tools-0.4.3-macosx.tar.gz
   # https://stackoverflow.com/questions/47318119/no-module-named-pandas-libs-tslibs-timedeltas-in-pyinstaller
